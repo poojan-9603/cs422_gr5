@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DogMeet - My Profile</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <div class="container">
+    
+    <div class="left-nav">
+      <div class="nav-icons">
+        <a href="index.html" class="icon">
+          <i class="fas fa-home"></i>
+          <span class="nav-label">Home</span>
+        </a>
+        <a href="chat.html" class="icon">
+          <i class="fas fa-comment-dots"></i>
+          <span class="nav-label">Chat</span>
+        </a>
+        <a href="history.html" class="icon">
+          <i class="fas fa-history"></i>
+          <span class="nav-label">History</span>
+        </a>
+        <a href="profile.html" class="icon active">
+          <i class="fas fa-paw"></i>
+          <span class="nav-label">Profile</span>
+        </a>
+        <a href="filter.html" class="icon">
+          <i class="fas fa-filter"></i>
+          <span class="nav-label">Filters</span>
+        </a>
+      </div>
+    </div>
+    
+    
+    <div class="profile-container">
+      <div class="profile-content">
+        <div class="profile-columns">
+          
+          <div class="owner-profile">
+            <h3>Owner Information</h3>
+            <div class="profile-info">
+              <div class="profile-pic-large">
+                <img src="https://ui-avatars.com/api/?name=John+Doe&background=random" alt="John Doe" id="profilePic" />
+              </div>
+              <div class="profile-details">
+                <div class="info-row"><span class="info-label">Name:</span><span class="info-value" id="profileName">John Doe</span></div>
+                <div class="info-row"><span class="info-label">Email:</span><span class="info-value" id="profileEmail">john.doe@example.com</span></div>
+                <div class="info-row"><span class="info-label">Phone:</span><span class="info-value" id="profilePhone">(555) 123-4567</span></div>
+                <div class="info-row">
+                  <span class="info-label">Location:</span>
+                  <span class="info-value">
+                    <div class="location-input-container">
+                      <input type="text" class="location-input" id="locationInput" value="Chicago, IL" placeholder="Enter your location" />
+                      <div class="location-suggestions" id="locationSuggestions"></div>
+                    </div>
+                  </span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Experience:</span>
+                  <span class="info-value">
+                    <select id="experienceSelect">
+                      <option value="Beginner">Beginner</option>
+                      <option value="Intermediate" selected>Intermediate</option>
+                      <option value="Experienced">Experienced</option>
+                    </select>
+                  </span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Rating:</span>
+                  <span class="info-value">
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <span>(4.0)</span>
+                    </div>
+                  </span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Reviews:</span>
+                  <span class="info-value">
+                    <a href="#" id="viewMyReviews" class="view-reviews">View 12 reviews</a>
+                  </span>
+                </div>
+              </div>
+              <button class="edit-profile-btn" id="editProfileBtn">Edit Profile</button>
+            </div>
+          </div>
+
+          
+          <div class="dog-profiles">
+            <div class="section-header">
+              <h3>My Dogs</h3>
+              <button class="add-dog-btn"><i class="fas fa-plus"></i> Add Dog</button>
+            </div>
+            <div class="dogs-list">
+              <div class="dog-profile-card">
+                <div class="dog-profile-pic">
+                  <img src="https://dog.ceo/api/breed/retriever/golden/images/random" alt="Buddy" />
+                </div>
+                <div class="dog-profile-info">
+                  <h4>Buddy</h4>
+                  <p>Golden Retriever, 3 years</p>
+                  <div class="dog-tags">
+                    <span class="dog-tag">Friendly</span>
+                    <span class="dog-tag">Vaccinated</span>
+                    <span class="dog-tag">Trained</span>
+                  </div>
+                </div>
+                <div class="dog-profile-actions">
+                  <button class="edit-dog-btn"><i class="fas fa-edit"></i></button>
+                  <button class="delete-dog-btn"><i class="fas fa-trash"></i></button>
+                </div>
+              </div>
+
+              <div class="dog-profile-card">
+                <div class="dog-profile-pic">
+                  <img src="https://dog.ceo/api/breed/beagle/images/random" alt="Max" />
+                </div>
+                <div class="dog-profile-info">
+                  <h4>Max</h4>
+                  <p>Beagle, 2 years</p>
+                  <div class="dog-tags">
+                    <span class="dog-tag">Playful</span>
+                    <span class="dog-tag">Vaccinated</span>
+                    <span class="dog-tag">Energetic</span>
+                  </div>
+                </div>
+                <div class="dog-profile-actions">
+                  <button class="edit-dog-btn"><i class="fas fa-edit"></i></button>
+                  <button class="delete-dog-btn"><i class="fas fa-trash"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div id="reviewsModal" class="modal">
+      <div class="reviews-modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>My Reviews</h2>
+        <div class="reviews-list">
+          <!-- Reviews content here -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- Add Edit Profile Modal -->
+    <div id="editProfileModal" class="edit-profile-modal">
+      <div class="edit-profile-content">
+        <span class="close-modal" id="closeEditModal">&times;</span>
+        <h2>Edit Profile</h2>
+        <form id="editProfileForm">
+          <div class="edit-form-group">
+            <label for="editName">Name</label>
+            <input type="text" id="editName" name="name" required>
+          </div>
+          <div class="edit-form-group">
+            <label for="editEmail">Email</label>
+            <input type="email" id="editEmail" name="email" required>
+          </div>
+          <div class="edit-form-group">
+            <label for="editPhone">Phone</label>
+            <input type="tel" id="editPhone" name="phone" required>
+          </div>
+          <div class="edit-form-group">
+            <label for="editLocation">Location</label>
+            <input type="text" id="editLocation" name="location" required>
+          </div>
+          <div class="edit-form-group">
+            <label for="editExperience">Experience</label>
+            <select id="editExperience" name="experience">
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Experienced">Experienced</option>
+            </select>
+          </div>
+          <div class="edit-form-group">
+            <label for="editProfilePicUrl">Profile Picture URL</label>
+            <input type="url" id="editProfilePicUrl" name="profilePicUrl">
+          </div>
+          <div class="edit-profile-actions">
+            <button type="button" class="cancel-btn" id="cancelEditBtn">Cancel</button>
+            <button type="submit" class="save-btn">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Add Dog Modal -->
+    <div id="addDogModal" class="edit-profile-modal">
+      <div class="edit-profile-content">
+        <span class="close-modal" id="closeAddDogModal">&times;</span>
+        <h2>Add New Dog</h2>
+        <form id="addDogForm">
+          <div class="edit-form-group">
+            <label for="dogName">Name</label>
+            <input type="text" id="dogName" name="dogName" required>
+          </div>
+          <div class="edit-form-group">
+            <label for="dogBreed">Breed</label>
+            <input type="text" id="dogBreed" name="dogBreed" required>
+          </div>
+          <div class="edit-form-group">
+            <label for="dogAge">Age (years)</label>
+            <input type="number" id="dogAge" name="dogAge" min="0" step="0.5" required>
+          </div>
+          <div class="edit-form-group">
+            <label for="dogPhoto">Photo URL</label>
+            <input type="url" id="dogPhoto" name="dogPhoto" placeholder="Enter photo URL (optional)">
+          </div>
+          <div class="edit-form-group">
+            <label>Traits</label>
+            <div class="dog-traits-selection">
+              <label class="trait-checkbox"><input type="checkbox" name="dogTraits" value="Friendly"> Friendly</label>
+              <label class="trait-checkbox"><input type="checkbox" name="dogTraits" value="Playful"> Playful</label>
+              <label class="trait-checkbox"><input type="checkbox" name="dogTraits" value="Energetic"> Energetic</label>
+              <label class="trait-checkbox"><input type="checkbox" name="dogTraits" value="Calm"> Calm</label>
+              <label class="trait-checkbox"><input type="checkbox" name="dogTraits" value="Trained"> Trained</label>
+              <label class="trait-checkbox"><input type="checkbox" name="dogTraits" value="Vaccinated"> Vaccinated</label>
+            </div>
+          </div>
+          <div class="edit-profile-actions">
+            <button type="button" class="cancel-btn" id="cancelAddDogBtn">Cancel</button>
+            <button type="submit" class="save-btn">Add Dog</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

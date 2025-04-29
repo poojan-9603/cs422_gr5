@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DogMeet - History</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="left-nav">
+            <div class="nav-icons">
+                <a href="index.html" class="icon">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="chat.html" class="icon">
+                    <i class="fas fa-comment-dots"></i>
+                    <span class="nav-label">Chat</span>
+                </a>
+                <a href="history.html" class="icon active">
+                    <i class="fas fa-history"></i>
+                    <span class="nav-label">History</span>
+                </a>
+                <a href="profile.html" class="icon">
+                    <i class="fas fa-paw"></i>
+                    <span class="nav-label">Profile</span>
+                </a>
+                <a href="filter.html" class="icon">
+                    <i class="fas fa-filter"></i>
+                    <span class="nav-label">Filters</span>
+                </a>
+            </div>
+        </div>
+        
+        
+        <div class="history-container">
+            <div class="history-header">
+                <h2>Browsing History</h2>
+                <p>Dogs you've viewed recently</p>
+                <button id="clearHistory" class="clear-history-btn">Clear History</button>
+            </div>
+            <div class="history-list" id="historyList">
+                
+                <div class="no-history" id="noHistory">
+                    <i class="fas fa-search"></i>
+                    <p>No browsing history yet</p>
+                    <span>Start browsing to see your history here</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="history.js"></script>
+</body>
+</html>

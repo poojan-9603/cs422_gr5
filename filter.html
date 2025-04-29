@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPals - Filters</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="filter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left-nav">
+            <div class="nav-icons">
+                <a href="index.html" class="icon">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="chat.html" class="icon">
+                    <i class="fas fa-comment-dots"></i>
+                    <span class="nav-label">Chat</span>
+                </a>
+                <a href="history.html" class="icon">
+                    <i class="fas fa-history"></i>
+                    <span class="nav-label">History</span>
+                </a>
+                <a href="profile.html" class="icon">
+                    <i class="fas fa-paw"></i>
+                    <span class="nav-label">Profile</span>
+                </a>
+                <a href="filter.html" class="icon active">
+                    <i class="fas fa-filter"></i>
+                    <span class="nav-label">Filters</span>
+                </a>
+            </div>
+        </div>
+        <div class="filter-container">
+            <div class="filter-header">
+                <h2>Filter Dogs</h2>
+                <a href="index.html" class="close-btn"><i class="fas fa-times"></i></a>
+            </div>
+            <div class="filter-options">
+                <div class="filter-group">
+                    <h3>Breed</h3>
+                    <div class="filter-items">
+                        <div class="filter-item">Labrador</div>
+                        <div class="filter-item">Bulldog</div>
+                        <div class="filter-item">Beagle</div>
+                        <div class="filter-item">Golden Retriever</div>
+                        <div class="filter-item">German Shepherd</div>
+                        <div class="filter-item">Poodle</div>
+                        <div class="filter-item">Corgi</div>
+                        <div class="filter-item">Husky</div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Age</h3>
+                    <div class="filter-items">
+                        <div class="filter-item">Puppy (0-1 year)</div>
+                        <div class="filter-item">Young (1-3 years)</div>
+                        <div class="filter-item">Adult (3-7 years)</div>
+                        <div class="filter-item">Senior (7+ years)</div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Size</h3>
+                    <div class="filter-items">
+                        <div class="filter-item">Small</div>
+                        <div class="filter-item">Medium</div>
+                        <div class="filter-item">Large</div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Location</h3>
+                    <div class="filter-items">
+                        <div class="filter-item">Under 2 miles</div>
+                        <div class="filter-item">2-5 miles</div>
+                        <div class="filter-item">5+ miles</div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Owner Experience</h3>
+                    <div class="filter-items">
+                        <div class="filter-item">Beginner</div>
+                        <div class="filter-item">Intermediate</div>
+                        <div class="filter-item">Experienced</div>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <h3>Personality</h3>
+                    <div class="filter-items">
+                        <div class="filter-item">Friendly</div>
+                        <div class="filter-item">Energetic</div>
+                        <div class="filter-item">Calm</div>
+                        <div class="filter-item">Playful</div>
+                        <div class="filter-item">Protective</div>
+                        <div class="filter-item">Intelligent</div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-actions">
+                <button class="filter-btn reset-btn">Reset Filters</button>
+                <button class="filter-btn apply-btn">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+    <script src="filter.js"></script>
+</body>
+</html>

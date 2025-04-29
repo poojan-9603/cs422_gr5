@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPals - Find Your Dog's Perfect Playmate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="left-nav">
+            <div class="nav-icons">
+                <a href="index.html" class="icon active">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="chat.html" class="icon">
+                    <i class="fas fa-comment-dots"></i>
+                    <span class="nav-label">Chat</span>
+                </a>
+                <a href="history.html" class="icon">
+                    <i class="fas fa-history"></i>
+                    <span class="nav-label">History</span>
+                </a>
+                <a href="profile.html" class="icon">
+                    <i class="fas fa-paw"></i>
+                    <span class="nav-label">Profile</span>
+                </a>
+                <a href="filter.html" class="icon">
+                    <i class="fas fa-filter"></i>
+                    <span class="nav-label">Filters</span>
+                </a>
+            </div>
+        </div>
+        <div class="home-container">
+            <div class="dog-profile-full">
+                <div class="profile-card">
+                    <div class="profile-content">
+                        
+                        <div class="profile-left">
+                            <div class="dog-drawing">
+                                
+                            </div>
+                            <!-- <div class="profile-action">
+                                <button class="action-btn reject-btn">
+                                    <i class="fas fa-times btn-icon"></i>
+                                    <div class="btn-label">Next</div>
+                                </button>
+                            </div> -->
+                        </div>
+                        <div class="profile-right">
+                            <div class="dog-info">
+                                
+                            </div>
+                            <!-- <div class="profile-action">
+                                <button class="action-btn message-btn">
+                                    <i class="fas fa-comment btn-icon"></i>
+                                    <div class="btn-label">Message</div>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="home.js"></script>
+    
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="">
+        </div>
+    </div>
+</body>
+</html>

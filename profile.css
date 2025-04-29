@@ -1,0 +1,851 @@
+.profile-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    position: relative; /* Add position relative */
+}
+
+.profile-content {
+    width: 95%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    margin-bottom: 50px;
+    overflow: visible;
+    height: auto; /* Ensure height is auto to fit content */
+    min-height: 80vh; /* Set minimum height */
+}
+
+/* Update the profile columns layout for better spacing */
+.profile-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Increased from 30px to 40px */
+}
+
+/* Make sure the dog profiles section has enough space */
+.dog-profiles {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    margin-bottom: 40px;
+    overflow: visible;
+    height: auto; /* Add minimum height to ensure space for dog cards */
+}
+
+/* Ensure the dogs list has proper spacing */
+.dogs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px; /* Increased from 20px to 25px */
+    margin-top: 25px; /* Increased from 20px to 25px */
+    width: 100%;
+    overflow: visible;
+    height: auto; /* Add minimum height to ensure space for dog cards */;
+}
+
+.profile-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Owner Profile Section */
+.owner-profile, .dog-profiles {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.owner-profile h3, .dog-profiles h3 {
+    font-family: 'Nunito', sans-serif;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.profile-pic-large {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #f0f0f0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.info-label {
+    width: 100px;
+    font-weight: 600;
+    color: #666;
+}
+
+.info-value {
+    flex: 1;
+    color: #333;
+}
+
+.location-input-container {
+    position: relative;
+    width: 100%;
+}
+
+.location-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.location-input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.1);
+    outline: none;
+}
+
+.location-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 0 0 8px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.location-suggestion {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.location-suggestion:hover {
+    background-color: #f5f5f5;
+}
+
+select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+}
+
+.rating {
+    color: #ffc107;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.rating span {
+    color: #666;
+    margin-left: 5px;
+}
+
+.view-reviews {
+    color: #6c63ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.view-reviews:hover {
+    color: #5a52d5;
+    text-decoration: underline;
+}
+
+.edit-profile-btn {
+    padding: 12px 25px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.edit-profile-btn:hover {
+    background-color: #5a52d5;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.2);
+}
+
+/* Dog Profiles Section */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-dog-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-dog-btn:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
+}
+
+/* Add this to ensure dog cards are visible */
+
+
+.dog-profile-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    width: 100%; /* Ensure cards take full width of their grid cell */
+}
+
+/* Improve visibility of dog traits */
+.dog-tag {
+    padding: 5px 12px;
+    background-color: #f0f7ff;
+    color: #0288d1;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block; /* Ensure tags display properly */
+    margin-bottom: 5px; /* Add space between tags if they wrap */
+}
+
+/* Make sure modals appear properly */
+.modal, .edit-profile-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add styles for dog traits selection in the add dog modal */
+.dog-traits-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.trait-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.trait-checkbox:hover {
+    background-color: #e0e0e0;
+}
+
+.trait-checkbox input {
+    margin-right: 8px;
+}
+
+/* Toast notification styling */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.dog-profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dog-profile-pic {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dog-profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dog-profile-info {
+    flex: 1;
+}
+
+.dog-profile-info h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.dog-profile-info p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.dog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dog-tag {
+    padding: 5px 12px;
+    background-color: #f0f7ff;
+    color: #0288d1;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dog-profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.edit-dog-btn, .delete-dog-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.edit-dog-btn {
+    background-color: #f0f7ff;
+    color: #0288d1;
+}
+
+.edit-dog-btn:hover {
+    background-color: #0288d1;
+    color: white;
+}
+
+.delete-dog-btn {
+    background-color: #fff3f3;
+    color: #f44336;
+}
+
+.delete-dog-btn:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Reviews Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews-modal-content {
+    background-color: white;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #9e9e9e;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #333;
+}
+
+/* Edit Profile Modal */
+.edit-profile-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.edit-profile-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form-group {
+    margin-bottom: 20px;
+}
+
+.edit-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.edit-form-group input, 
+.edit-form-group select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.edit-form-group input:focus, 
+.edit-form-group select:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.1);
+    outline: none;
+}
+
+.edit-profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.cancel-btn {
+    padding: 12px 25px;
+    background-color: #f5f5f5;
+    color: #555;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.save-btn {
+    padding: 12px 25px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #5a52d5;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .profile-columns {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .owner-profile {
+        flex: 1;
+    }
+    
+    .dog-profiles {
+        flex: 1;
+    }
+}
+
+/* Add this to your profile.css file */
+.dog-traits-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.trait-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.trait-checkbox:hover {
+    background-color: #e0e0e0;
+}
+
+.trait-checkbox input {
+    margin-right: 8px;
+}
+
+.trait-checkbox input:checked + .trait-checkbox {
+    background-color: #e0f7fa;
+    color: #0288d1;
+}
+
+/* Make sure the modals have proper styling */
+.edit-profile-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.edit-profile-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form-group {
+    margin-bottom: 20px;
+}
+
+.edit-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.edit-form-group input, 
+.edit-form-group select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.edit-profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.cancel-btn {
+    padding: 12px 25px;
+    background-color: #f5f5f5;
+    color: #555;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save-btn {
+    padding: 12px 25px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: #5a52d5;
+}
+
+/* Update the dog profiles section to ensure it's fully visible */
+.dog-profiles {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    margin-bottom: 30px; /* Add margin to ensure space at the bottom */
+    overflow: visible; /* Allow content to be visible beyond container */
+}
+
+/* Ensure the dogs list is properly displayed */
+
+
+.dog-profile-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    width: 100%; /* Ensure cards take full width of their grid cell */
+}
+
+/* Improve visibility of dog traits */
+.dog-tag {
+    padding: 5px 12px;
+    background-color: #f0f7ff;
+    color: #0288d1;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block; /* Ensure tags display properly */
+    margin-bottom: 5px; /* Add space between tags if they wrap */
+}
+
+/* Make sure modals appear properly */
+.modal, .edit-profile-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add styles for dog traits selection in the add dog modal */
+.dog-traits-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.trait-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.trait-checkbox:hover {
+    background-color: #e0e0e0;
+}
+
+.trait-checkbox input {
+    margin-right: 8px;
+}
+
+.trait-checkbox input:checked + .trait-checkbox {
+    background-color: #e0f7fa;
+    color: #0288d1;
+}
+
+/* Make sure the modals have proper styling */
+.edit-profile-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.edit-profile-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form-group {
+    margin-bottom: 20px;
+}
+
+.edit-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.edit-form-group input, 
+.edit-form-group select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.edit-profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.cancel-btn {
+    padding: 12px 25px;
+    background-color: #f5f5f5;
+    color: #555;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save-btn {
+    padding: 12px 25px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background-color: #5a52d5;
+}
+
+/* Make sure the body and html elements allow scrolling */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto !important; /* Force vertical scrolling */
+    position: relative; /* Add position relative */
+}
+main, .main-content {
+    height: 100%;
+    overflow-y: auto !important;
+    position: relative;
+}
